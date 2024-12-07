@@ -1,0 +1,87 @@
+@import "_tips.scss";
+@import "_mixin.scss";
+
+.header {
+  width: 100%;
+  background-color: $blackColor;
+  margin-bottom: 40px;
+
+  &__container {
+    min-height: 80px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__menu-burger {
+    display: none;
+  }
+}
+
+.menu {
+  &__ul {
+    gap: 80px;
+    margin-right: 55px;
+  }
+
+  &__ul-li-link {
+    @include menuLink();
+  }
+
+  &__ul-li-link:focus {
+    padding: 3px;
+    background: $focus;
+    color: #fff;
+  }
+
+  &__ul-li-link:hover {
+    color: $orange;
+  }
+
+  &__ul-li-link:active {
+    color: $active;
+    background: 0;
+    padding: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 963px;
+  }
+
+  .menu {
+    &__ul {
+      gap: 33px;
+      margin-right: 50px;
+    }
+  }
+
+  .header {
+    margin-bottom: 34px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 714px;
+  }
+
+  .header {
+    &__menu {
+      display: none;
+    }
+
+    &__menu-burger {
+      display: block;
+      background-color: #4a4a4a;
+    }
+  }
+
+  .menu {
+    &__ul {
+      margin-right: 0;
+      padding: 12px 27px 12px 27px;
+      gap: 72px;
+    }
+  }
+}

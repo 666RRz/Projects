@@ -1,0 +1,115 @@
+body {
+  background-color: rgb(210, 201, 201);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+input {
+  min-width: 350px;
+  min-height: 25px;
+  font-size: 18px;
+  border: 0;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+input:focus {
+  outline: 2px solid gray;
+}
+
+.rootWrapper {
+  max-width: 1400px;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #e5e4e4;
+  padding: 40px;
+  border-radius: 30px;
+}
+
+.data-div {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  border: 0;
+  background: 0;
+  padding: 15px;
+  margin-top: 50px;
+  outline: 1px solid rgb(100, 100, 233);
+  border-radius: 15px;
+  transition: all 0.3;
+  background-color: rgb(100, 100, 233);
+  color: #fff;
+  font-weight: 800;
+  font-size: 18px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.input-wrong {
+  background-color: rgb(247, 151, 151);
+}
+
+.div-mir {
+  background-color: rgb(142, 231, 142);
+  color: #fffffe;
+}
+
+.div-visa {
+  background-color: rgb(97, 97, 245);
+  color: #e5e4e4;
+}
+
+.div-master {
+  background-color: #f69f14;
+  color: #ec0014;
+  font-weight: 800;
+}
+
+.div-exp {
+  background-color: #016fd0;
+  color: #fffffe;
+}
+
+.div-some {
+  background-color: rgb(219, 160, 243);
+  color: #fffffe;
+}
+
+.disabled {
+  opacity: 0.6;
+}
+
+#cardDataHolder {
+display: flex;
+gap: 20px;
+align-items: center;
+}
+
+#logo {
+  width: 40px;
+  height: 40px;
+}
+

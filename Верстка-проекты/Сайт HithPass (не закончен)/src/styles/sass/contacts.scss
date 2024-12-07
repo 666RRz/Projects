@@ -1,0 +1,262 @@
+@import "_tips.scss";
+@import "_mixin.scss";
+
+.contacts {
+  margin-bottom: 70px;
+
+  &__h2 {
+    margin-bottom: 22px;
+    font-family: $TT;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 31px;
+    color: rgb(32, 32, 32);
+  }
+
+  &__wrapper {
+    gap: 30px;
+
+    &-left {
+      position: relative;
+      background-repeat: no-repeat;
+      background-image: url(../img/map.jpeg);
+      min-height: 460px;
+      min-width: 850px;
+
+      &-content {
+        position: relative;
+        max-width: 350px;
+        padding: 175px 0 150px 60px;
+        flex-direction: column;
+        background: rgba(32, 32, 32, 0.85);
+
+        h2 {
+          margin-bottom: 5px;
+          font-family: $TT;
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 22px;
+          color: rgb(255, 255, 255);
+        }
+
+        p {
+          max-width: 300px;
+          margin-bottom: 3px;
+          font-family: $Roboto;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 28px;
+          color: rgb(202, 202, 202);
+        }
+
+        button {
+          position: absolute;
+          top: 21px;
+          right: 20px;
+          max-width: max-content;
+        }
+      }
+    }
+
+    &-right {
+      form {
+        position: relative;
+        h3 {
+          position: absolute;
+          top: -6px;
+        }
+        p {
+          max-width: 409px;
+          padding-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+.content__phone {
+  align-items: center;
+  gap: 5px;
+
+  &-span {
+    font-family: $TT;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    color: rgb(255, 110, 48);
+  }
+}
+
+.form {
+  max-width: 410px;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+  &__h3 {
+    font-family: $TT;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 22px;
+    color: rgb(32, 32, 32);
+  }
+
+  &__p {
+    font-family: $Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: rgb(153, 153, 153);
+  }
+
+  &__input {
+    @include formInput();
+  }
+
+  &__input:focus {
+    @include input-focus();
+  }
+
+  &__input:hover::placeholder {
+    color: $orange;
+  }
+
+  &__textarea {
+    @include formInput();
+    padding-top: 15px;
+    min-height: 150px;
+  }
+
+  &__textarea:focus {
+    @include input-focus();
+  }
+
+  &__textarea:hover::placeholder {
+    color: $orange;
+  }
+
+  &__button {
+    @include button();
+  }
+
+  &__button:focus {
+    @include button-focus();
+  }
+
+  &__button:hover {
+    @include button-hover();
+  }
+
+  &__button:active {
+    @include button-active();
+  }
+}
+
+@media (max-width: 1024px) {
+  .contacts {
+    &__wrapper-left {
+      position: relative;
+      min-width: 590px;
+      background-image: url(../img/map-1024.jpeg);
+
+      &-content {
+        position: relative;
+        max-width: none;
+        position: absolute;
+        bottom: 1px;
+        padding: 25px 267px 21px 30px;
+
+        h2 {
+          margin-bottom: 0;
+        }
+
+        p {
+          line-height: 28px;
+        }
+      }
+    }
+  }
+
+  .content__phone {
+    bottom: 24px;
+    left: 180px;
+    position: absolute;
+  }
+
+  .form {
+    padding-right: 25px;
+    max-width: 342px;
+    &__input,
+    &__textarea {
+      min-width: 0;
+      width: 100%;
+    }
+
+    &__textarea {
+      min-height: 138px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contacts {
+    &__wrapper {
+      flex-direction: column;
+      min-width: 100%;
+      &-left {
+        min-width: 100%;
+        background-image: url(../img/map-768.jpeg);
+
+        &-content {
+          padding-right: 0;
+          padding-bottom: 43px;
+          min-width: 436px;
+          padding-right: 248px;
+
+          h2 {
+            margin-bottom: 5px;
+          }
+
+          p {
+            max-width: inherit;
+          }
+
+          div {
+            bottom: 20px;
+            left: 30px;
+          }
+        }
+      }
+      &-right {
+        form {
+          padding-right: 0;
+          max-width: 466px;
+
+          p {
+            padding-top: 23px;
+            max-width: 100%;
+            margin-bottom: 14px;
+          }
+
+          div {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+          }
+          input {
+            max-width: 441px;
+            max-height: 50px;
+          }
+          textarea {
+            max-width: 441px;
+          }
+          button {
+            max-width: 126px;
+          }
+        }
+      }
+    }
+  }
+}

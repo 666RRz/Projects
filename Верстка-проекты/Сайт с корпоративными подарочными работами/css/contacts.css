@@ -1,0 +1,140 @@
+
+body {
+  display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.main {
+  flex-direction: column;
+  flex: 1;
+}
+
+.contacts__main {
+  padding-top: 24px;
+}
+
+.contacts__wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  margin-bottom: 53px;
+  border: 5px solid #bead28;
+  background: rgb(255, 255, 255);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #035a7a;
+}
+
+.contacts__wrapper-content {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 69px 83px;
+  row-gap: 108px;
+  flex-direction: column;
+}
+
+.contacts__wrapper-content-div,
+.contacts__wrapper-req {
+  position: relative;
+}
+
+.copy-button-first,
+.copy-button-sec {
+  position: absolute;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background-image: url(../img/copy-button-white.png);
+  background-size: cover;
+  transition: all 0.3s;
+}
+
+.copy-button-first:hover {
+  opacity: 1;
+  background-image: url(../img/copy-button.png);
+}
+
+.copy-button-sec:hover {
+  opacity: 1;
+  background-image: url(../img/copy-button.png);
+}
+
+.contacts__address {
+  flex-direction: column;
+  gap: 25px;
+  margin-right: 22px;
+}
+
+.contacts__wrapper-content-img,
+.req__img {
+  max-width: 597px;
+  max-height: 397px;
+  width: 100%;
+}
+
+.div__h2,
+.requisites-div__h2 {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 46px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.div__p {
+  max-width: 420px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #fff;
+}
+
+.div__info-span {
+  min-width: 137px;
+  margin-right: 26px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  color: #fff;
+}
+
+.div__info-link {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.div__info-social {
+  max-width: max-content;
+  display: inline-block;
+  min-width: 28px;
+  min-height: 25px;
+  background-image: url(../img/vk-png.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.req {
+  gap: 30px;
+}
+
+.requisites-div {
+  flex-direction: column;
+}
+
+.requisites-div__h2 {
+  margin-bottom: 27px;
+}
+
+.requisites-div__div {
+  flex-direction: column;
+  gap: 13px;
+}
+
+.requisites-div__div-p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #fff;
+}

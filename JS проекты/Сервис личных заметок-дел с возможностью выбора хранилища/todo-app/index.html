@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0,
+         maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/normalize-min.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script type="module">
+     import todoApp from '../todo-app/logic/main.js'
+     todoApp()
+    </script>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <title>MyToDoDeals</title>
+  </head>
+
+  <body>
+    <aside id="aside">
+      <button class="touch" id="aside-button">Переключиться на серверное хранилище</button>
+    </aside>
+    <div id="newDealP" class="none">
+      <svg
+        class="newDeal__popUp-svg"
+        width="200"
+        height="80"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <text
+          x="10"
+          y="35"
+          font-family="Georgia, serif"
+          font-size="50"
+          fill="goldenrod"
+          font-weight="bolder"
+          letter-spacing="3"
+          id="toDoText"
+        >
+          To-DO
+        </text>
+        <text
+          x="10"
+          y="70"
+          font-family="Georgia, serif"
+          font-size="20"
+          fill="goldenrod"
+          font-weight="bolder"
+          letter-spacing="3"
+        >
+          Новая задача
+        </text>
+      </svg>
+      <form method="post" action="#" id="form" class="newDeal__content flex">
+        <button id="cancel" tabindex="-1" class="newDeal__closeBtn touch">
+          <svg
+            class="newDeal__closeBtn-svg"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0,0,256,256"
+            width="32px"
+            height="32px"
+            fill-rule="nonzero"
+          >
+            <g
+              fill="#daa520"
+              fill-rule="nonzero"
+              stroke="none"
+              stroke-width="1"
+              stroke-linecap="butt"
+              stroke-linejoin="miter"
+              stroke-miterlimit="10"
+              stroke-dasharray=""
+              stroke-dashoffset="0"
+              font-family="none"
+              font-weight="none"
+              font-size="none"
+              text-anchor="none"
+              style="mix-blend-mode: normal"
+            >
+              <g transform="scale(5.12,5.12)">
+                <path
+                  d="M25,2c-12.69047,0 -23,10.30953 -23,23c0,12.69047 10.30953,23 23,23c12.69047,0 23,-10.30953 23,-23c0,-12.69047 -10.30953,-23 -23,-23zM25,4c11.60953,0 21,9.39047 21,21c0,11.60953 -9.39047,21 -21,21c-11.60953,0 -21,-9.39047 -21,-21c0,-11.60953 9.39047,-21 21,-21zM32.99023,15.98633c-0.26377,0.00624 -0.51439,0.11645 -0.69727,0.30664l-7.29297,7.29297l-7.29297,-7.29297c-0.18827,-0.19353 -0.4468,-0.30272 -0.7168,-0.30274c-0.40692,0.00011 -0.77321,0.24676 -0.92633,0.62377c-0.15312,0.37701 -0.06255,0.80921 0.22907,1.09303l7.29297,7.29297l-7.29297,7.29297c-0.26124,0.25082 -0.36648,0.62327 -0.27512,0.97371c0.09136,0.35044 0.36503,0.62411 0.71547,0.71547c0.35044,0.09136 0.72289,-0.01388 0.97371,-0.27512l7.29297,-7.29297l7.29297,7.29297c0.25082,0.26124 0.62327,0.36648 0.97371,0.27512c0.35044,-0.09136 0.62411,-0.36503 0.71547,-0.71547c0.09136,-0.35044 -0.01388,-0.72289 -0.27512,-0.97371l-7.29297,-7.29297l7.29297,-7.29297c0.29724,-0.28583 0.38857,-0.7248 0.23,-1.10546c-0.15857,-0.38066 -0.53454,-0.62497 -0.94679,-0.61524z"
+                ></path>
+              </g>
+            </g>
+          </svg>
+        </button>
+        <input tabindex="-1" placeholder="Название" type="text" class="newDeal__input-name" />
+        <select tabindex="-1" class="newDeal__select-days">
+          <optgroup
+            class="newDeal__select-optGroup select"
+            label="Переодичность"
+          >
+            <option class="select__onDays">По дням</option>
+            <option selected class="select__one">Одноразовая</option>
+          </optgroup>
+        </select>
+        <div id="daysBtn" class="newDeal__btn-div">
+          <button data-id="1" class="newDeal__btn-button touch">Пн</button>
+          <button data-id="2" class="newDeal__btn-button touch">Вт</button>
+          <button data-id="3" class="newDeal__btn-button touch">Ср</button>
+          <button data-id="4" class="newDeal__btn-button touch">Чт</button>
+          <button data-id="5" class="newDeal__btn-button touch">Пт</button>
+          <button data-id="6" class="newDeal__btn-button touch">СБ</button>
+          <button data-id="7" class="newDeal__btn-button touch">Вс</button>
+        </div>
+        <select tabindex="-1" class="newDeal__select-group">
+          <optgroup
+            class="newDeal__select-optGroup select"
+            label="Выбор группы"
+          >
+            <option class="select__everyDay">Высокий приоритет</option>
+            <option class="select__onDays">Средний приоритет</option>
+            <option class="select__one">Легкий приоритет</option>
+            <option selected class="select__one">Без группы</option>
+          </optgroup>
+        </select>
+        <textarea tabindex="-1"
+          class="newDeal__textarea"
+          placeholder="Описание"
+          cols="10"
+          rows="10"
+        ></textarea>
+        <button type="submit" id="add" tabindex="1" class="newDeal__add touch">
+          Добавить задачу
+        </button>
+      </form>
+    </div>
+    <header class="header flex">
+      <div class="container header__container flex">
+        <a href="../html/index.html" class="header__logo-link touch">
+          <svg
+            class="header__logo"
+            width="200"
+            height="50"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <text
+              x="10"
+              y="35"
+              font-family="Georgia, serif"
+              font-size="50"
+              fill="goldenrod"
+              font-weight="bolder"
+              letter-spacing="3"
+            >
+              To-DO
+            </text>
+          </svg>
+        </a>
+        <div class="header__time">
+          <time id="header-time"></time>
+        </div>
+        <nav class="header__nav nav">
+          <ul class="nav__ul flex">
+            <li data-target="#newDealP" id="newDeal" class="nav__list touch">Новая задача</li>
+            <li id="group-btn" class="nav__list touch">Посмотреть группы</li>
+            <li class="nav__list touch" id="theme">Сменить тему</li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="main">
+      <div class="container main__container flex" id="main"></div>
+    </div>
+    <div class="noDeals none">
+      <h2 class="noDeals__h2">Новых задач пока нет</h2>
+    </div>
+  </body>
+</html>

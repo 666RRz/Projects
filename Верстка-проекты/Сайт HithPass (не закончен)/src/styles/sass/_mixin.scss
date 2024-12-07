@@ -1,0 +1,95 @@
+@mixin menuLink {
+  font-family: "TT", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #ffffff;
+  transition: all 0.3s;
+}
+
+@mixin button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 22px 15px 22px;
+  font-family: $Roboto;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  color: rgb(255, 255, 255);
+  outline: 1px solid $orange;
+  background-color: $orange;
+  transition: all 0.3s;
+}
+
+@mixin button-hover {
+  background-color: #bc572b;
+}
+
+@mixin button-focus {
+  border: 0;
+  outline: 3px solid rgb(206, 67, 7);
+  background: $focus;
+}
+
+@mixin button-active {
+  background-color: #ce4307;
+}
+
+@mixin input-focus {
+  border: 0;
+  outline: 0;
+  outline: 1px solid $orange;
+}
+
+@mixin Hteg {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  background-color: #202020;
+  padding: 7px 15px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0%;
+  color: rgb(255, 255, 255);
+}
+
+@mixin HtegProjects {
+  position: absolute;
+  top: 5px;
+  right: 6px;
+  background-color: #202020;
+  padding: 7px 14px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0%;
+  color: rgb(255, 255, 255);
+}
+
+@mixin formInput {
+  min-width: 385px;
+  min-height: 50px;
+  font-family: $Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  color: rgb(153, 153, 153);
+  background: rgb(233, 233, 233);
+  border: 0;
+  outline: 0;
+  padding-left: 23px;
+}
+
+@mixin social-focus {
+  fill: #bc572b;
+}
+
+@mixin social-hover {
+  fill: $orange;
+}
+
+@mixin social-active {
+  fill: $active;
+}

@@ -1,0 +1,169 @@
+html {
+  background-image: url("../img/back-white.jpg");
+  cursor: url("../img/cursor-white.cur"), auto;
+}
+
+.header__container {
+  background-color: rgba(176, 195, 213, 0.8);
+  color: #fff;
+}
+
+.header__logo text {
+  fill: #fff;
+}
+
+.header__logo:hover text {
+  stroke: #fff;
+}
+
+.nav__list:hover {
+  outline-color: #fff;
+}
+
+.touch:hover {
+  cursor: url("../img/touch-white.cur"), auto;
+}
+
+input,
+textarea,
+select,
+.newDeal__add {
+  border: 0;
+  border-radius: 10px;
+  outline: 3px solid #fff;
+  transition: all 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.6);
+  font-weight: 800;
+  color: #fff;
+  padding: 16px;
+  font-size: 20px;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+.newDeal__add:hover {
+  border: 0;
+  outline: 0;
+}
+
+option {
+  font-weight: 800;
+}
+
+/*NEWDEALPOPUP*/
+.newDeal__popUp {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(245, 245, 245, 0.6);
+  padding: 60px;
+  border-radius: 30px;
+  color: #ffff;
+  outline: 3px solid rgba(0, 0, 0, 0.6);
+}
+
+.newDeal__popUp-svg {
+  margin-bottom: 40px;
+}
+
+.newDeal__content {
+  flex-direction: column;
+  color: #fff;
+  gap: 30px;
+}
+
+.newDeal__closeBtn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.newDeal__input-name {
+  border: 0;
+  border-radius: 10px;
+}
+
+::placeholder {
+  color: #fff;
+  opacity: 0.5;
+}
+
+.newDeal__popUp-svg text {
+  fill: #fff;
+}
+
+.newDeal__closeBtn-svg g {
+  fill: #fff;
+}
+
+.noDeals__h2 {
+  outline: 5px solid #fff;
+  color: #fff;
+}
+
+.main__container {
+  background-color: rgba(176, 195, 213, 0.8);
+  color: #fff;
+}
+
+.deals__wrapper {
+  border: 1px solid #fff;
+}
+.option-buttons {
+  color: #fff;
+}
+
+.deals__done,
+.deals__delete {
+  transition: all 0.3s;
+}
+
+.deals__done:hover,
+.deals__delete:hover {
+  font-size: 20px;
+}
+.group__div {
+  background-color: rgba(176, 195, 213, 0.8);
+}
+
+.group__button-reset {
+  color: #fff;
+}
+
+.group__button-confirm {
+  color: #fff;
+}
+
+.newDeal__btn-button {
+  border: 1px solid black;
+  color: black;
+}
+
+.newDeal__btn-button:hover {
+  background-color: #fff;
+  color: black;
+}
+
+.newDeal__btn-button-back {
+  background-color: #fff;
+  color: black;
+}
+
+#aside {
+  background-color: rgba(176, 195, 213, 0.8);
+}
+
+#aside-button {
+  color: #fff;
+  outline: 3px solid #fff;
+}
+
+#aside-button:hover {
+  color: #000;
+  outline: 3px solid #000;
+}

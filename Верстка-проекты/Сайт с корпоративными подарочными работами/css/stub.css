@@ -1,0 +1,63 @@
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	background-image: url(../img/stub-back.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	
+}
+
+.main {
+	justify-content: center;
+	align-items: center;
+	flex: 1;
+}
+
+.stub__content {
+	flex-direction: column;
+	align-items: center;
+	gap: 25px;
+	font-size: 20px;
+	color: rgb(107, 107, 107);
+}
+
+.stub__img {
+	margin-bottom: 45px;
+}
+
+.vk-img {
+	max-width: 20px;
+	max-height: 20px;
+}
+
+.stub__description-tel a {
+	color: rgb(107, 107, 107);
+	font-weight: 800;
+}
+
+.stub__description-tel span {
+	color: var(--gold-p);
+	font-weight: 800;
+}
+
+.stub__description-vk a {
+	color: rgb(107, 107, 107);
+	transition: all .3s;
+}
+
+.stub__description-vk:hover a {
+	color: var(--gold-p);
+}
+
+.katalog {
+	color: rgb(107, 107, 107);
+	transition: all .3s;
+}
+
+.katalog:hover {
+	color: var(--gold-p);
+}
+

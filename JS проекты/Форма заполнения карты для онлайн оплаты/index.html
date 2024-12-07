@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OnlineCard</title>
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="./OnlineCardForm.css" />
+  <script type="module" defer src="./main.js"></script>
+</head>
+
+<body>
+  <div class="rootWrapper">
+    <form id="form" method="POST" style="display: flex; flex-direction: column; align-items: center;">
+      <div id="my-card" class="card-js card-wrapper">
+        <h2 id='cardName'>Новая карта</h2>
+        <input type="text" required id="cardNumber" placeholder="XXXX XXXX XXXX XXXX" class="card-number"
+          name="card-number" />
+        <!-- <div class="data-div">
+          <input required id="cardMonth" placeholder="month" class="expiry-month" name="expiry-month" />
+          <input required id="cardYear" placeholder="year" class="expiry-year" name="expiry-year" />
+        </div> -->
+        <input required id="cardDate" placeholder="month/year" class="expiry-month" name="expiry-month" />
+        <input required id="cardCvc" placeholder="cvc" class="cvc" name="cvc" />
+        <input id='cardEmail' required type="text" placeholder="email">
+      </div>
+
+      <div class="card-div">
+        <button disabled class='disabled' id="submitButton" type="submit">Добавить новую карту</button>
+      </div>
+    </form>
+  </div>
+</body>
+
+
+</html>
