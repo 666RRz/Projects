@@ -1,0 +1,14 @@
+@use '_common';
+
+.atm {
+	&__wrapper {
+		&-h2 {
+			@include common.Title();
+			margin-bottom: 55px;
+		}
+		&-map {
+			width: 100%;
+			max-height: 750px;
+		}
+	}
+}

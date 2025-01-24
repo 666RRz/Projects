@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://api-maps.yandex.ru/v3/?apikey=b6471760-0a91-4367-8069-638d737720d5&lang=ru_RU"></script>
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css"
+		/>
+		<link rel="stylesheet" href="/main.css" />
+		<title>Coin. Bank</title>
+	</head>
+	<body>
+		<header id="header" class="header"></header>
+
+		<main>
+			<div id="root"></div>
+			<div
+				class="hidden container"
+				id="map"
+				style="width: 1340px; height: 730px; padding: 0"
+			></div>
+		</main>
+		<script type="module">
+			/// Получение списка банкоматов
+			async function getAtmsData(token) {
+				let result = await fetch('http://localhost:3000/banks').then(res =>
+					res.json()
+				)
+
+				result = result.payload
+				return result
+			}
+
+			const data = await getAtmsData(window.localStorage.getItem('token'))
+
+			initMap()
+
+			async function initMap() {
+				await ymaps3.ready
+
+				const {
+					YMap,
+					YMapDefaultSchemeLayer,
+					YMapDefaultFeaturesLayer,
+					YMapMarker,
+				} = ymaps3
+
+				const map = new YMap(
+					document.getElementById('map'),
+
+					{
+						location: {
+							center: [38.975313, 45.03547],
+
+							zoom: 10,
+						},
+					}
+				)
+
+				map.addChild(new YMapDefaultSchemeLayer())
+				map.addChild(new YMapDefaultFeaturesLayer())
+
+				data.forEach(element => {
+					const content = document.createElement('section')
+					content.innerHTML = `
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M12 0C7.58 0 4 3.58 4 8c0 5.25 8 13 8 13s8-7.75 8-13c0-4.42-3.58-8-8-8zm0 12c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"
+						fill="#FF0000"/>
+					</svg>
+				`
+
+					const marker = new YMapMarker(
+						{
+							coordinates: [element.lon, element.lat],
+							draggable: false,
+						},
+						content
+					)
+
+					map.addChild(marker)
+				})
+			}
+		</script>
+	</body>
+</html>

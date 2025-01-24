@@ -1,0 +1,60 @@
+@use '_common';
+@use '_tips';
+
+.balance-chart {
+	min-width: 684px;
+
+	&__title {
+		@include common.H3();
+		margin-bottom: 25px;
+	}
+
+	&__table {
+		width: 510px;
+		height: 165px;
+		border: 1px solid black;
+	}
+
+	&__canvas {
+		height: 165px;
+	}
+
+	&__max-value {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		font-family: 'Ubuntu';
+		font-size: 20px;
+		font-weight: 500;
+		line-height: 23px;
+		letter-spacing: -2%;
+	}
+
+	&__period {
+		display: flex;
+		font-family: 'Ubuntu';
+		gap: 12px;
+		max-width: 510px;
+		padding-left: 35px;
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 23px;
+		letter-spacing: -2%;
+	}
+
+	&__wrapper {
+		display: flex;
+		gap: 25px;
+	}
+
+	&_wrapper-column {
+		flex-direction: column;
+	}
+
+	&__months-wrapper {
+		display: flex;
+		max-width: 510px;
+		justify-content: center;
+		gap: 48px;
+	}
+}

@@ -1,0 +1,168 @@
+@mixin Button-white {
+	font-family: 'Ubuntu';
+	font-size: 16px;
+	font-weight: 500;
+	padding: 14px 24px 14px 24px;
+	border: 0;
+	border: 2px solid rgb(17, 106, 204);
+	border-radius: 7px;
+	background: rgb(255, 255, 255);
+	color: rgb(17, 106, 204);
+	transition: all 0.5s ease;
+}
+
+@mixin Button-blue {
+	display: flex;
+	max-width: 110px;
+	border: 0;
+	border-radius: 7px;
+	justify-content: center;
+	align-items: center;
+	padding: 16px 24px;
+	font-family: 'Ubuntu';
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 20px;
+	color: rgb(255, 255, 255);
+	background-color: $blue;
+	transition: all 0.5s ease;
+}
+
+@mixin ButtonSvg {
+	display: flex;
+	max-width: 110px;
+	border: 0;
+	border-radius: 7px;
+	justify-content: center;
+	align-items: center;
+	padding: 16px 24px;
+	font-family: 'Ubuntu';
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 20px;
+	color: rgb(255, 255, 255);
+	background-color: $blue;
+	transition: all 0.5s ease;
+	position: relative;
+	padding-left: 50px;
+	background-repeat: no-repeat;
+	background-size: 20px 20px;
+	background-position: left 24px top 50%;
+}
+
+@mixin Button-hover {
+	background-color: $hover;
+	color: $white;
+}
+
+@mixin Button-active {
+	background-color: $active;
+}
+
+@mixin Button-disable {
+	background-color: rgb(156, 163, 175);
+	opacity: 0.5;
+	transition: all 0.5s ease;
+
+	&:hover {
+		background-color: rgb(156, 163, 175);
+		opacity: 0.5;
+		cursor: default;
+		color: $blue;
+	}
+}
+
+@mixin Select {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 44px;
+	max-width: max-content;
+	border: none;
+	outline: 1px solid $blue;
+	border-radius: 7px;
+	appearance: none;
+	font-family: 'Ubuntu';
+	font-size: 16px;
+	font-weight: 400;
+	background-image: url('../img/select-down.svg');
+	background-repeat: no-repeat;
+	background-position: right 16px center;
+	background-size: 10px;
+	padding-left: 16px;
+	padding-right: 204px;
+	color: $gray;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+@mixin Input {
+	min-width: 300px;
+	min-height: 44px;
+	padding-left: 16px;
+	border-radius: 7px;
+	background: rgb(255, 255, 255);
+	transition: all 0.3s;
+	outline: 1px solid rgb(156, 163, 175);
+
+	&:focus {
+		background-color: rgba(160, 195, 255, 0.1);
+		outline: 1px solid rgb(17, 106, 204);
+	}
+}
+
+@mixin Title {
+	font-family: 'Ubuntu';
+	line-height: 40px;
+	font-size: 34px;
+	font-weight: 700;
+	letter-spacing: -2%;
+	color: #000;
+}
+
+@mixin H3 {
+	font-family: 'Ubuntu';
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 23px;
+	letter-spacing: -2%;
+	color: #000;
+}
+
+@mixin Input-label {
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 20px;
+	letter-spacing: -1%;
+}
+
+@mixin ComponentsBackground {
+	transition: all 0.5s ease;
+	justify-content: center;
+	gap: 25px;
+	align-items: flex-start;
+	background: rgb(243, 244, 246);
+	border-radius: 50px;
+	padding: 25px 50px;
+	box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.25);
+	font-family: 'Ubuntu', sans-serif;
+
+	&:hover {
+		cursor: pointer;
+		transform: translateY(-5px);
+	}
+}
+
+$blue: #116acc;
+$white: #ffffff;
+$hover: #5897da;
+$active: #0b4a8d;
+$red: #ba0000;
+$lightRed: #fd4e5d;
+$green: #76ca66;
+$gray: rgb(55, 65, 81);
+$warning: rgb(251, 199, 86);
+$blue-hover: rgb(160, 195, 255);

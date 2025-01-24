@@ -1,0 +1,140 @@
+@use '_common';
+
+.accounts {
+	margin-top: 50px;
+	font-family: 'Ubuntu';
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 50px;
+
+		&-button {
+			@include common.ButtonSvg();
+			max-width: max-content;
+		}
+
+		&-button-svg {
+			position: absolute;
+			left: 24px;
+		}
+
+		&-button:active {
+			@include common.Button-active();
+		}
+
+		&-button:hover {
+			@include common.Button-hover();
+		}
+
+		&-left {
+			position: relative;
+			display: flex;
+			&-title {
+				@include common.Title();
+				margin-right: 35px;
+			}
+
+			&-select {
+				@include common.Select();
+			}
+
+			&-select-back {
+				background-image: url('../img/select-up.svg');
+			}
+
+			&-select-options {
+				max-width: 300px;
+				display: none;
+				position: absolute;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				top: 105%;
+				left: 222px;
+				width: 100%;
+				background-color: #fff;
+				box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.25);
+			}
+
+			&-select-options-active {
+				display: flex;
+				flex-direction: column;
+				background-color: #fff;
+			}
+		}
+	}
+
+	&__body {
+		display: flex;
+		gap: 70px;
+		flex-wrap: wrap;
+
+		&-item {
+			max-width: 400px;
+			padding: 22px;
+			border-radius: 9px;
+			box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.25);
+			background: rgb(255, 255, 255);
+		}
+	}
+}
+
+.account {
+	&__title {
+		margin-bottom: 9px;
+		font-size: 18px;
+		font-weight: 500;
+	}
+
+	&__balance {
+		margin-bottom: 9px;
+		font-size: 14px;
+		font-weight: 400;
+	}
+
+	&__options {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+
+		&-info {
+			margin-right: 86px;
+		}
+
+		&-span {
+			line-height: 15px;
+			font-size: 14px;
+			font-weight: 800;
+		}
+
+		&-info-date {
+			font-size: 13px;
+			font-weight: 400;
+		}
+
+		&-info-button {
+			@include common.Button-blue();
+		}
+
+		&-info-button:active {
+			@include common.Button-active;
+		}
+
+		&-info-button:hover {
+			@include common.Button-hover;
+		}
+	}
+}
+
+.select-option {
+	padding: 10px;
+	font-size: 16px;
+	font-weight: 400;
+	color: common.$gray;
+
+	&:hover {
+		background-color: common.$blue-hover;
+		cursor: pointer;
+	}
+}

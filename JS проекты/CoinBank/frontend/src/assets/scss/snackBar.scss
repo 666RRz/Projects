@@ -1,0 +1,63 @@
+@use '_common';
+
+.closeSvg {
+	position: absolute;
+	right: 21px;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.bar-wrapper {
+	width: 440px;
+	position: absolute;
+	top: 120px;
+	display: flex;
+	justify-content: space-between;
+	padding: 12px 0 12px 24px;
+	border-radius: 8px;
+	left: 40%;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	animation-name: Come;
+	animation-duration: 2s;
+}
+
+.success-wrapper {
+	background-color: rgb(118, 202, 102, 0.1);
+	color: common.$green;
+	fill: common.$green;
+}
+
+.decline-wrapper {
+	background-color: rgb(186, 0, 0, 0.1);
+	color: common.$red;
+	fill: common.$red;
+}
+
+.warning-wrapper {
+	background-color: rgb(251, 199, 86, 0.1);
+	color: common.$warning;
+	fill: common.$warning;
+}
+
+.info-wrapper {
+	background-color: rgb(17, 106, 204, 0.1);
+	color: common.$blue;
+	fill: common.$blue;
+}
+
+@keyframes Come {
+	0% {
+		opacity: 0;
+		top: 0px;
+	}
+
+	100% {
+		opacity: 1;
+		top: 120px;
+	}
+}

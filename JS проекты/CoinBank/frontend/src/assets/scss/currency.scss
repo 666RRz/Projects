@@ -1,0 +1,185 @@
+@use '_common';
+
+.currency {
+	&__title {
+		@include common.Title();
+		margin-bottom: 56px;
+	}
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 400px;
+		&-right {
+			width: 100%;
+			height: 100%;
+		}
+
+		&-left {
+			width: 100%;
+		}
+	}
+}
+
+.myCurrency {
+	margin-bottom: 44px;
+	@include common.ComponentsBackground();
+	max-width: 488px;
+	padding: 50px 50px;
+	background-color: #fff;
+
+	&:hover {
+		transform: none;
+		cursor: default;
+	}
+	&__title {
+		@include common.Title();
+		font-size: 20px;
+		line-height: 23px;
+		margin-bottom: 25px;
+	}
+
+	&__ul {
+		display: flex;
+		flex-direction: column;
+		gap: 25px;
+
+		font-family: 'Ubuntu', sans-serif;
+		font-size: 20px;
+		font-weight: 600;
+		color: rgb(0, 0, 0);
+
+		&-div {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+			gap: 25px;
+		}
+
+		&-span {
+			width: 80%;
+			height: 0;
+			border: 1px dashed rgb(0, 0, 0);
+		}
+	}
+}
+
+.changeCurrency {
+	margin-bottom: 44px;
+	max-width: 488px;
+	@include common.ComponentsBackground();
+	padding: 50px 50px;
+	background-color: #fff;
+
+	&:hover {
+		transform: none;
+		cursor: default;
+	}
+
+	&__innerContent {
+		display: flex;
+		gap: 25px;
+	}
+	&__title {
+		@include common.Title();
+		font-size: 20px;
+		margin-bottom: 25px;
+	}
+
+	&__div {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		margin-bottom: 25px;
+	}
+
+	&__sumDiv {
+		display: flex;
+		width: 100%;
+		align-items: center;
+		gap: 8px;
+	}
+
+	&__selectSum {
+		@include common.Input();
+		min-width: 284px;
+		padding-left: 16px;
+	}
+
+	&__selectFrom {
+		position: relative;
+	}
+
+	&__selectIn {
+		position: relative;
+	}
+
+	&__button {
+		@include common.Button-blue();
+
+		&:hover {
+			@include common.Button-hover();
+		}
+	}
+}
+
+.select {
+	@include common.Select;
+
+	display: flex;
+	justify-content: start;
+	min-width: 119px;
+	padding: 0;
+	padding-left: 16px;
+	outline: 1px solid rgb(156, 163, 175);
+}
+
+.select-back {
+	background-image: url(../img/select-up.svg);
+}
+
+.allCurrency {
+	max-width: 703px;
+	height: 1025px;
+	overflow: hidden;
+	background: rgb(229, 229, 229);
+}
+
+.span-green {
+	border: 1px dashed common.$green;
+}
+
+.span-red {
+	border: 1px dashed common.$lightRed;
+}
+
+.currency-transaction-ul {
+	position: absolute;
+	top: 105%;
+	left: 0;
+	min-width: 135px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding: 0;
+	border-radius: 7px 7px 0px 0px;
+	display: none;
+}
+
+.currency-transaction-ul-active {
+	display: block;
+}
+
+.currency-transaction-li {
+	min-width: 119px;
+	margin: 0;
+	padding: 8px 0px 8px 16px;
+	background: none;
+	box-shadow: none;
+	border-radius: 0;
+
+	&:hover {
+		background-color: common.$blue-hover;
+		cursor: pointer;
+	}
+}

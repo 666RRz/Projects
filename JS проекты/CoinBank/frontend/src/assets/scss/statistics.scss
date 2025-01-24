@@ -1,0 +1,28 @@
+@use '_common';
+@use '_tips';
+@use 'header';
+
+.statistics {
+	font-family: 'Ubuntu', sans-serif;
+	&__balance {
+		&-chart {
+			padding: 25px 100px;
+			margin-bottom: 50px;
+			@include common.ComponentsBackground();
+
+			&:hover {
+				cursor: default;
+				transition: none;
+				transform: none;
+			}
+		}
+
+		&-wrapper {
+			gap: 45px;
+		}
+
+		&-months {
+			max-width: 1000px;
+		}
+	}
+}
