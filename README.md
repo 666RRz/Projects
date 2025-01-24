@@ -26,48 +26,48 @@
 <section id="bank">
 				<h2>Онлаин - банк на JS</h2>
 				<div style="display: flex">
-					<img width="50%" src="./ScreenShots/bank1.png" alt="Онлаин банк" />
-					<img width="50%" src="./ScreenShots/bank2.png" alt="Онлаин банк" />
-					<img width="50%" src="./ScreenShots/bank3.png" alt="Онлаин банк" />
-					<img width="50%" src="./ScreenShots/bank4.png" alt="Онлаин банк" />
+					<img width="100%" src="./ScreenShots/bank1.png" alt="Онлаин банк" />
+					<img width="100%" src="./ScreenShots/bank2.png" alt="Онлаин банк" />
+					<img width="100%" src="./ScreenShots/bank3.png" alt="Онлаин банк" />
+					<img width="100%" src="./ScreenShots/bank4.png" alt="Онлаин банк" />
 					<img width="100%" src="./ScreenShots/bank5.png" alt="Онлаин банк" />
 				</div>
 </section>
 <section id="game">
 				<h2>Игра в нахождение пары</h2>
 				<div style="display: flex">
-					<img width="50%" src="./ScreenShots/game1.png" alt="Игра в пары" />
-					<img width="50%" src="./ScreenShots/game2.png" alt="Игра в пары" />
+					<img width="100%" src="./ScreenShots/game1.png" alt="Игра в пары" />
+					<img width="100%" src="./ScreenShots/game2.png" alt="Игра в пары" />
 					<img width="100%" src="./ScreenShots/game3.png" alt="Игра в пары" />
 				</div>
 </section>
 <section id="TO-DO">
 				<h2>Сервис личных заметок-дел с возможностью выбора хранилища</h2>
 				<div style="display: flex">
-					<img width="50%" src="./ScreenShots/todo1.png" alt="TO-DO" />
-					<img width="50%" src="./ScreenShots/todo2.png" alt="TO-DO" />
-					<img width="50%" src="./ScreenShots/todo3.png" alt="TO-DO" />
-					<img width="50%" src="./ScreenShots/todo4.png" alt="TO-DO" />
+					<img width="100%" src="./ScreenShots/todo1.png" alt="TO-DO" />
+					<img width="100%" src="./ScreenShots/todo2.png" alt="TO-DO" />
+					<img width="100%" src="./ScreenShots/todo3.png" alt="TO-DO" />
+					<img width="100%" src="./ScreenShots/todo4.png" alt="TO-DO" />
 					<img width="100%" src="./ScreenShots/todo5.png" alt="TO-DO" />
 				</div>
 </section>
 <section id="Students">
 				<h2>Сервис-хранилище профилей студентов</h2>
 				<div style="display: flex">
-					<img width="50%" src="./ScreenShots/stud1.png" alt="TO-DO" />
-					<img width="50%" src="./ScreenShots/stud2.png" alt="TO-DO" />
-					<img width="50%" src="./ScreenShots/stud3.png" alt="TO-DO" />
-					<img width="50%" src="./ScreenShots/stud4.png" alt="TO-DO" />
+					<img width="100%" src="./ScreenShots/stud1.png" alt="TO-DO" />
+					<img width="100%" src="./ScreenShots/stud2.png" alt="TO-DO" />
+					<img width="100%" src="./ScreenShots/stud3.png" alt="TO-DO" />
+					<img width="100%" src="./ScreenShots/stud4.png" alt="TO-DO" />
 					<img width="100%" src="./ScreenShots/stud5.png" alt="TO-DO" />					
 				</div>
 </section>
 <section id="Card">
 				<h2>Компонент формы онлаин оплаты картой</h2>
 				<div style="display: flex">
-					<img width="50%" src="./ScreenShots/card1.png" alt="card" />
-					<img width="50%" src="./ScreenShots/card2.png" alt="card" />
-					<img width="50%" src="./ScreenShots/card3.png" alt="card" />
-					<img width="50%" src="./ScreenShots/card4.png" alt="card" />
+					<img width="100%" src="./ScreenShots/card1.png" alt="card" />
+					<img width="100%" src="./ScreenShots/card2.png" alt="card" />
+					<img width="100%" src="./ScreenShots/card3.png" alt="card" />
+					<img width="100%" src="./ScreenShots/card4.png" alt="card" />
 				</div>
 </section>
 <section id="tests">
