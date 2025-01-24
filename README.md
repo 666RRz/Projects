@@ -2,4 +2,6 @@
 
 Пет проекты
 
-![Онлаин банк](https://github.com/Projects/ScreenShots/bank1.png)
+<p align="center">
+ <img width="200px" src="./ScreenShots/1.png" alt="Онлаин банк"/>
+</p>
