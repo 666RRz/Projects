@@ -7,7 +7,7 @@ describe('Тест игры в пары', () => {
       // returning false here prevents Cypress from
       // failing the test
       false);
-    cy.visit('http://localhost:3000');
+    cy.visit('http://127.0.0.1:5500/cardGame2/index.html');
   });
 
   const startGame = () => {
@@ -29,7 +29,7 @@ describe('Тест игры в пары', () => {
   function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min) + min); // Максимум не включается, минимум включается
+  return Math.floor(Math.random() * (max - min) + min);
 }
 
   it('Тест на запуск игры', () => {
@@ -93,7 +93,7 @@ describe('Тест игры в пары', () => {
             }
    });
   });
-  it.only('Тест на нахождение непарных карточек', () => {
+  it('Тест на нахождение непарных карточек', () => {
     startGame()
     cy.get('ul li').each(($card, index) => {
           let card = cy.get('ul li').eq(getRandomInt(0,8))

@@ -1,5 +1,4 @@
 // Logic
-
 export default async function todoApp() {
   let deals;
   if (JSON.parse(localStorage.getItem('massiveDeals')) === null || JSON.parse(localStorage.getItem('massiveDeals'))) {

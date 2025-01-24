@@ -5,7 +5,7 @@
     <meta
       name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1.0,
-         maximum-scale=1.0, minimum-scale=1.0"
+      maximum-scale=1.0, minimum-scale=1.0"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="styles/reset.css" />
@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="styles/main.css" />
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script type="module">
-     import todoApp from '../todo-app/logic/main.js'
-     todoApp()
+      import todoApp from "../todo-app/logic/main.js";
+      todoApp();
     </script>
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
     <title>MyToDoDeals</title>
@@ -22,7 +22,9 @@
 
   <body>
     <aside id="aside">
-      <button class="touch" id="aside-button">Переключиться на серверное хранилище</button>
+      <button class="touch" id="aside-button">
+        Переключиться на серверное хранилище
+      </button>
     </aside>
     <div id="newDealP" class="none">
       <svg
@@ -90,7 +92,12 @@
             </g>
           </svg>
         </button>
-        <input tabindex="-1" placeholder="Название" type="text" class="newDeal__input-name" />
+        <input
+          tabindex="-1"
+          placeholder="Название"
+          type="text"
+          class="newDeal__input-name"
+        />
         <select tabindex="-1" class="newDeal__select-days">
           <optgroup
             class="newDeal__select-optGroup select"
@@ -120,7 +127,8 @@
             <option selected class="select__one">Без группы</option>
           </optgroup>
         </select>
-        <textarea tabindex="-1"
+        <textarea
+          tabindex="-1"
           class="newDeal__textarea"
           placeholder="Описание"
           cols="10"
@@ -158,7 +166,9 @@
         </div>
         <nav class="header__nav nav">
           <ul class="nav__ul flex">
-            <li data-target="#newDealP" id="newDeal" class="nav__list touch">Новая задача</li>
+            <li data-target="#newDealP" id="newDeal" class="nav__list touch">
+              Новая задача
+            </li>
             <li id="group-btn" class="nav__list touch">Посмотреть группы</li>
             <li class="nav__list touch" id="theme">Сменить тему</li>
           </ul>

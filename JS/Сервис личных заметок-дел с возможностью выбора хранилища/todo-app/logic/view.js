@@ -166,5 +166,4 @@ function createTodoApp(container,
   });
 }
 
-export { createTodoApp }
-
+export { createTodoApp };
