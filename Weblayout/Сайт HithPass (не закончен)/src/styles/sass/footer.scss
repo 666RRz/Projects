@@ -36,7 +36,7 @@
 }
 
 .footer__logo {
-  p {
+  &-descr {
     margin-top: 5px;
     font-family: $TT;
     font-size: 14px;
@@ -89,6 +89,55 @@
     &__p {
       margin-right: 0;
       margin-left: 62px;
+    }
+    &__contacts {
+      gap: 10px;
+
+      &-links {
+        padding-top: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    &__p {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .footer {
+    &__container {
+      padding-top: 27px;
+      flex-direction: column-reverse;
+      gap: 28px;
+    }
+
+    &__logo-wrapper {
+      min-width: 320px;
+      padding-bottom: 14px;
+      padding-top: 15px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      align-self: center;
+      background-color: #4a4a4a;
+    }
+
+    &__logo {
+      align-self: center;
+
+      &-descr {
+        margin-top: 0;
+        font-size: 10px;
+        line-height: 13px;
+        letter-spacing: 0%;
+      }
     }
   }
 }

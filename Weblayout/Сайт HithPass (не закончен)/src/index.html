@@ -12,6 +12,8 @@
     <header class="header">
       <div class="container header__container flex">
         <picture class="hedaer__logo hedaer__logo-picture logo-picture logo">
+          <source srcset="img/Logo-320.svg" media="(max-width: 320px)" />
+          <source srcset="img/Logo-768.svg" media="(max-width: 768px)" />
           <source srcset="img/Logo-1024.svg" media="(max-width: 1024px)" />
           <img class="logo__img" src="img/logo.svg" alt="High pass" />
         </picture>
@@ -55,7 +57,7 @@
           </svg>
         </button>
       </div>
-      <menu class="header__menu-burger">
+      <menu class="header__menu-burger none">
         <ul class="menu__ul menu flex">
           <li class="menu__ul-li">
             <a href="#" class="menu__ul-li-link">О&nbsp;студии</a>
@@ -74,6 +76,65 @@
           </li>
         </ul>
       </menu>
+      <menu class="header__menu-burger-mobile none">
+        <ul class="menu__ul menu flex">
+          <li class="menu__ul-li">
+            <button class="menu__ul-li-burger-mobile">
+              <img src="img/burger-mobile.svg" alt="Открыть меню" />
+            </button>
+          </li>
+        </ul>
+      </menu>
+      <menu class="burger-open flex none">
+        <button type="button burger-open__button">
+          <img src="img/close.svg" alt="Закрыть" />
+        </button>
+        <ul class="menu__ul menu burger-open__ul flex">
+          <li class="menu__ul-li burger-open__li">
+            <a href="#" class="menu__ul-li-link burger-open__link"
+              >О&nbsp;студии</a
+            >
+          </li>
+          <li class="menu__ul-li burger-open__li">
+            <a href="#" class="menu__ul-li-link burger-open__link"
+              >Наши проекты</a
+            >
+          </li>
+          <li class="menu__ul-li burger-open__li">
+            <a href="#" class="menu__ul-li-link burger-open__link">Услуги</a>
+          </li>
+          <li class="menu__ul-li burger-open__li">
+            <a href="#" class="menu__ul-li-link burger-open__link">
+              Мастер-классы
+            </a>
+          </li>
+          <li class="menu__ul-li burger-open__li">
+            <a href="#" class="menu__ul-li-link burger-open__link">Контакты</a>
+          </li>
+        </ul>
+        <div class="content__phone burger-open__phone flex">
+          <svg
+            class="content__phone-svg"
+            width="16.500000"
+            height="16.500000"
+            viewBox="0 0 16.5 16.5"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <desc>Created with Pixso.</desc>
+            <defs />
+            <path
+              id="Vector"
+              d="M15.59 11.34C14.46 11.34 13.37 11.16 12.35 10.83C12.03 10.72 11.67 10.8 11.43 11.05L9.99 12.86C7.39 11.62 4.96 9.28 3.67 6.6L5.46 5.07C5.71 4.82 5.78 4.46 5.68 4.14C5.34 3.12 5.17 2.03 5.17 0.9C5.17 0.41 4.75 0 4.26 0L1.09 0C0.59 0 0 0.21 0 0.9C0 9.42 7.08 16.5 15.59 16.5C16.24 16.5 16.5 15.92 16.5 15.41L16.5 12.25C16.5 11.76 16.08 11.34 15.59 11.34Z"
+              fill="#FF6E30"
+              fill-opacity="1.000000"
+              fill-rule="nonzero"
+            />
+          </svg>
+          <span class="content__phone-span">+7&nbsp;495 424-23-532</span>
+        </div>
+      </menu>
     </header>
     <main class="main">
       <section class="hero">
@@ -82,8 +143,8 @@
             <div class="hero__grid-item hero__grid-item-left">
               <span>#мастеркласс</span>
               <div class="hero__grid-item-left-content">
-                <p>Мастер-класс от&nbsp;Игоря Робова</p>
-                <h1>Неоновый фотосет 2.0 7&nbsp;июля 20:00</h1>
+                <p>Мастер-класс от Игоря Робова</p>
+                <h1>Неоновый фотосет 2.0 7 июля 20:00</h1>
                 <button type="button">Узнать больше</button>
               </div>
             </div>
@@ -123,6 +184,10 @@
             <div class="about__content-right flex">
               <picture class="about__content-right-picture">
                 <source
+                  srcset="./img/about-img-320.jpeg"
+                  media="(max-width: 320px)"
+                />
+                <source
                   srcset="./img/about-img-768.jpeg"
                   media="(max-width: 768px)"
                 />
@@ -139,7 +204,7 @@
               </picture>
 
               <div class="about__seller flex">
-                <h3 class="about__seller-h3">Подписаться на&nbsp;рассылку</h3>
+                <h3 class="about__seller-h3">Подписаться на рассылку</h3>
                 <div class="about__seller-touch flex">
                   <input
                     class="about__seller-touch-input"
@@ -195,7 +260,7 @@
                 <h3 class="article__h3">
                   В своём стремлении улучшить опыт мы упускаем, что явные...
                 </h3>
-                <span class="article__span"
+                <span class="article__span human__span"
                   ><svg
                     class="article__calendar"
                     width="11.666626"
@@ -489,18 +554,20 @@
     </main>
     <footer class="footer">
       <div class="footer__container container flex">
-        <picture class="footer__logo footer__logo-picture logo__picture logo">
-          <source srcset="img/Logo-1024.svg" media="(max-width: 1024px)" />
-          <img class="logo__img" src="img/logo.svg" alt="High pass" />
-          <p>Фотостудия High pass® 2018–2020</p>
-        </picture>
+        <div class="footer__logo-wrapper">
+          <picture class="footer__logo footer__logo-picture logo__picture logo">
+            <source srcset="img/Logo-320.svg" media="(max-width: 320px)" />
+            <source srcset="img/Logo-1024.svg" media="(max-width: 1024px)" />
+            <img class="logo__img" src="img/logo.svg" alt="High pass" />
+          </picture>
+          <p class="footer__logo-descr">Фотостудия High pass® 2018–2020</p>
+        </div>
         <p class="footer__p">
           Которая из&nbsp;моих фотографий самая любимая? Та, которую
           я&nbsp;собираюсь снять завтра. &copy;&nbsp;Имоджен Каннингем
         </p>
         <div class="footer__contacts flex">
           <p>Больше интересного:</p>
-          <br />
           <div class="footer__contacts-links flex">
             <a class="footer__contacts-links-classmates" href="#"
               ><svg

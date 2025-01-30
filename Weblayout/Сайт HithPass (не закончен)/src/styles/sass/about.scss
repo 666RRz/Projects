@@ -1,5 +1,5 @@
-@import "_tips.scss";
-@import "_mixin.scss";
+@use "_tips" as *;
+@use "_mixin" as *;
 
 .about {
   background: #202020;
@@ -18,14 +18,14 @@
 }
 
 .about__content {
-  gap: 30px;
+  width: 100%;
 }
 
 .about__content-left {
   flex-direction: column;
+  width: 50%;
 
   &-p {
-    min-width: 630px;
     font-family: $Roboto;
     font-size: 16px;
     font-weight: 400;
@@ -37,76 +37,76 @@
 
 .about__content-right {
   flex-direction: column;
-
+  width: 50%;
   img {
-    max-width: 630px;
+    max-width: 100%;
     max-height: 255px;
     margin-bottom: 25px;
   }
+}
+.about__seller {
+  flex-direction: column;
 
-  .about__seller {
-    flex-direction: column;
+  &-h3 {
+    margin-bottom: 16px;
+    font-family: $TT;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 22px;
+    color: rgb(255, 255, 255);
+  }
 
-    &-h3 {
-      margin-bottom: 16px;
-      font-family: $TT;
-      font-size: 24px;
+  &-touch {
+    gap: 30px;
+    flex-wrap: wrap;
+
+    ::placeholder {
+      font-family: $Roboto;
+      font-size: 16px;
       font-weight: 400;
-      line-height: 22px;
-      color: rgb(255, 255, 255);
+      line-height: 19px;
+      color: rgb(202, 202, 202);
+      transition: all 0.3s;
     }
 
-    &-touch {
-      gap: 30px;
+    &-input {
+      padding-left: 23px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      background-color: #4a4a4a;
+      min-width: 450px;
+      transition: all 0.3s;
+      outline: 0;
+      border: 0;
+    }
 
-      ::placeholder {
-        font-family: $Roboto;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 19px;
-        color: rgb(202, 202, 202);
-        transition: all 0.3s;
-      }
+    &-input:focus {
+      @include input-focus();
+    }
 
-      &-input {
-        padding-left: 23px;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        background-color: #4a4a4a;
-        min-width: 450px;
-        transition: all 0.3s;
-        outline: 0;
-        border: 0;
-      }
+    &-input:hover::placeholder {
+      color: $orange;
+    }
 
-      &-input:focus {
-        @include input-focus();
-      }
+    &-input:active {
+      outline: 0;
+      border: 0;
+    }
 
-      &-input:hover::placeholder {
-        color: $orange;
-      }
+    &-btn {
+      @include button();
+    }
 
-      &-input:active {
-        outline: 0;
-        border: 0;
-      }
+    &-btn:focus {
+      @include button-focus();
+    }
 
-      &-btn {
-        @include button();
-      }
+    &-btn:hover {
+      @include button-hover();
+    }
 
-      &-btn:focus {
-        @include button-focus();
-      }
-
-      &-btn:hover {
-        @include button-hover();
-      }
-
-      &-btn:active {
-        @include button-active();
-      }
+    &-btn:active {
+      @include button-active();
     }
   }
 }
@@ -126,18 +126,17 @@
   .about__content-right {
     img {
       margin-bottom: 20px;
-      max-width: 466px;
       max-height: 100%;
       min-height: 332px;
     }
-    .about__seller {
-      &-touch {
-        flex-direction: column;
-        max-width: 124px;
-        gap: 22px;
-        &-input {
-          min-width: 316px;
-        }
+  }
+  .about__seller {
+    &-touch {
+      flex-direction: column;
+      max-width: 124px;
+      gap: 22px;
+      &-input {
+        min-width: 316px;
       }
     }
   }
@@ -166,6 +165,68 @@
     picture {
       min-height: 569px;
       margin-bottom: 24px;
+    }
+  }
+}
+
+@media (max-width: 737px) {
+  .about {
+    margin-bottom: 50px;
+    padding-bottom: 62px;
+    padding-top: 28px;
+    &__h2 {
+      font-size: 18px;
+      margin-bottom: 0px;
+    }
+  }
+
+  .about__content {
+    flex-direction: column;
+    gap: 22px;
+    &-left {
+      p {
+        min-width: 280px;
+        font-size: 14px;
+        line-height: 25px;
+      }
+    }
+
+    &-right {
+      max-width: none;
+      picture {
+        min-height: fit-content;
+      }
+      img {
+        min-height: fit-content;
+      }
+    }
+    .about__seller {
+      &-h3 {
+        margin-bottom: 12px;
+        font-size: 18px;
+        line-height: 22px;
+        text-wrap: nowrap;
+      }
+
+      &-touch {
+        min-width: 100%;
+        gap: 20px;
+
+        &-input {
+          min-width: 0;
+          padding: 12px 0 12px 23px;
+        }
+        ::placeholder {
+          font-size: 14px;
+          line-height: 16px;
+        }
+        &-btn {
+          align-self: flex-start;
+          padding: 12px 22px 9px 22px;
+          line-height: 16px;
+          font-size: 14px;
+        }
+      }
     }
   }
 }

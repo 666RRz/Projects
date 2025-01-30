@@ -1,5 +1,7 @@
+@use "_tips.scss";
+
 @mixin menuLink {
-  font-family: "TT", sans-serif;
+  font-family: tips.$TT;
   font-size: 16px;
   font-weight: 400;
   line-height: 21px;
@@ -12,13 +14,13 @@
   justify-content: center;
   align-items: center;
   padding: 15px 22px 15px 22px;
-  font-family: $Roboto;
+  font-family: tips.$Roboto;
   font-size: 16px;
   font-weight: 700;
   line-height: 19px;
   color: rgb(255, 255, 255);
-  outline: 1px solid $orange;
-  background-color: $orange;
+  outline: 1px solid tips.$orange;
+  background-color: tips.$orange;
   transition: all 0.3s;
 }
 
@@ -29,7 +31,7 @@
 @mixin button-focus {
   border: 0;
   outline: 3px solid rgb(206, 67, 7);
-  background: $focus;
+  background: tips.$focus;
 }
 
 @mixin button-active {
@@ -39,7 +41,7 @@
 @mixin input-focus {
   border: 0;
   outline: 0;
-  outline: 1px solid $orange;
+  outline: 1px solid tips.$orange;
 }
 
 @mixin Hteg {
@@ -69,9 +71,10 @@
 }
 
 @mixin formInput {
-  min-width: 385px;
+  max-width: 385px;
+  width: 100%;
   min-height: 50px;
-  font-family: $Roboto;
+  font-family: tips.$Roboto;
   font-size: 16px;
   font-weight: 400;
   line-height: 19px;
@@ -87,9 +90,9 @@
 }
 
 @mixin social-hover {
-  fill: $orange;
+  fill: tips.$orange;
 }
 
 @mixin social-active {
-  fill: $active;
+  fill: tips.$active;
 }

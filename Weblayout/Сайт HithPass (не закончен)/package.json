@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gulp build",
-    "dev": "gulp dev"
+    "dev": "gulp dev --verbose"
   },
   "author": "skillbox",
   "license": "ISC",
@@ -25,8 +25,11 @@
     "gulp-htmlmin": "^5.0.1",
     "gulp-image": "^6.2.1",
     "gulp-notify": "^3.2.0",
+    "gulp-postcss": "^10.0.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-svg-sprite": "^1.5.0",
-    "gulp-uglify-es": "^2.0.0"
+    "gulp-uglify-es": "^2.0.0",
+    "postcss-font-variant": "^5.0.0",
+    "postcss-import": "^16.1.0"
   }
 }

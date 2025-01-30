@@ -1,8 +1,8 @@
-@import "_tips.scss";
-@import "_mixin.scss";
+@use "_tips" as *;
+@use "_mixin" as *;
 
 .contacts {
-  margin-bottom: 70px;
+  margin-bottom: 67px;
 
   &__h2 {
     margin-bottom: 22px;
@@ -14,7 +14,9 @@
   }
 
   &__wrapper {
-    gap: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 
     &-left {
       position: relative;
@@ -88,10 +90,10 @@
 }
 
 .form {
-  max-width: 410px;
   align-items: flex-start;
   flex-direction: column;
   height: 100%;
+  width: 100%;
 
   &__h3 {
     font-family: $TT;
@@ -107,13 +109,16 @@
     font-weight: 400;
     line-height: 22px;
     color: rgb(153, 153, 153);
-    margin-bottom: 15px;
+    margin-bottom: 12px;
   }
 
-  &__fieldset-input{
+  &__fieldset-input {
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 10px
+    gap: 18px;
+    align-items: flex-start;
   }
 
   &__input {
@@ -130,8 +135,8 @@
 
   &__textarea {
     @include formInput();
-    padding-top: 15px;
-    min-height: 150px;
+    padding-top: 18px;
+    min-height: 132px;
   }
 
   &__textarea:focus {
@@ -159,8 +164,13 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1300px) {
   .contacts {
+    &__wrapper {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
     &__wrapper-left {
       position: relative;
       min-width: 590px;
@@ -191,7 +201,6 @@
   }
 
   .form {
-    padding-right: 25px;
     max-width: 342px;
     &__input,
     &__textarea {
@@ -207,25 +216,25 @@
 
 @media (max-width: 768px) {
   .contacts {
+    margin-bottom: 69px;
     &__wrapper {
       flex-direction: column;
       min-width: 100%;
       &-left {
-        min-width: 100%;
+        width: 100%;
+        min-height: 463px;
         background-image: url(../img/map-768.jpeg);
 
         &-content {
+          width: 95%;
           padding-right: 0;
           padding-bottom: 43px;
-          min-width: 436px;
-          padding-right: 248px;
+          padding-right: 0px;
+          padding-top: 28px;
 
           h2 {
+            max-width: max-content;
             margin-bottom: 5px;
-          }
-
-          p {
-            max-width: inherit;
           }
 
           div {
@@ -242,14 +251,13 @@
           p {
             padding-top: 23px;
             max-width: 100%;
-            margin-bottom: 14px;
           }
 
           div {
             width: 100%;
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 18px;
           }
           input {
             max-width: 441px;
@@ -257,11 +265,114 @@
           }
           textarea {
             max-width: 441px;
+            min-height: 131px;
           }
           button {
             max-width: 126px;
           }
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    max-width: 100%;
+  }
+
+  .contacts {
+    margin-bottom: 51px;
+    position: relative;
+    &__h2 {
+      font-size: 18px;
+      line-height: 23px;
+    }
+    &__wrapper-left {
+      min-height: 473px;
+      min-width: 100%;
+      position: absolute;
+      top: 37px;
+      left: 0;
+      background-image: url(../img/map-320.svg);
+    }
+
+    .content {
+      padding-top: 27px;
+      padding-left: 20px;
+      padding-right: 50px;
+      padding-bottom: 41px;
+      min-width: 0;
+
+      &__h2 {
+        margin-bottom: 10px;
+        font-size: 18px;
+        line-height: 22px;
+      }
+
+      &__p {
+        max-width: 257px;
+
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+      }
+
+      &__phone {
+        left: 20px;
+        bottom: 15px;
+
+        &-span {
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+    }
+
+    &__wrapper-right {
+      padding-top: 495px;
+    }
+
+    .form {
+      &__h3 {
+        font-size: 18px;
+        line-height: 22px;
+      }
+
+      ::placeholder {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px;
+      }
+
+      &__fieldset-input {
+        max-width: 255px;
+      }
+
+      &__input {
+        min-height: 40px;
+      }
+
+      &__textarea {
+        padding-top: 15px;
+        min-height: 135px;
+      }
+
+      &__p {
+        margin-bottom: 14px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        padding-top: 22px;
+      }
+
+      &__button {
+        padding: 0;
+        width: 115px;
+        height: 40px;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 16px;
       }
     }
   }
